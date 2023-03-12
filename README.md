@@ -1,5 +1,6 @@
 # Habit Tracker APP :-
 
+Habit Tracker APP using Node.JS, Express.JS, MongoDB to keep track of user's habits.
 
 ## Features :-
 1. SignUp :-
@@ -65,7 +66,7 @@
 ####    Step 1 :-  Clone the repo
  
  ```
-git clone https://github.com/SahilMund/Hospital-API.git
+git clone https://github.com/SahilMund/Habit_Tracker_App.git
  ```
 ####    Step 2 :- To install the dependencies
 
@@ -85,5 +86,39 @@ npm start
 ## Folder Structure :-
 
 ```
-
+.gitignore
+README.md
+assets
+   |-- css
+   |   |-- dashboard.css
+   |   |-- header.css
+   |   |-- layout.css
+   |   |-- user_form.css
+config
+   |-- flash-middleware.js
+   |-- mongoose.js
+controllers
+   |-- habit_controller.js
+   |-- user_controller.js
+index.js
+models
+   |-- habit.js
+   |-- user.js
+package-lock.json
+package.json
+routes
+   |-- index.js
+   |-- users.js
+views
+   |-- dashboard.ejs
+   |-- layout.ejs
+   |-- partials
+   |   |-- _daily-view.ejs
+   |   |-- _habit-input.ejs
+   |   |-- _navbar.ejs
+   |   |-- _toggle-view.ejs
+   |   |-- _weekly-view.ejs
+   |-- user_sign_in.ejs
+   |-- user_sign_up.ejs
+   |-- welcome.ejs
 ```

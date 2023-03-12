@@ -5,8 +5,8 @@
             <h3>No Habits Present !!</h3>
             </li>
    <% } %> 
+   <!-- To keep track of current Streak -->
     <% habits.forEach(details => {
-        
         let sortedDate = details.dates.sort((a,b) => a.date - b.date);
 
         let currentStreak = 0;
@@ -21,11 +21,10 @@
         }
         %>
 
-
     <li class="habit-list-item habit-list-weekly-item">
        <div>
         <div class="habit-list-item-name"><b><%= details.content %></b></div>
-      
+      <hr>
         <p>
    
             <a href="/favorite/?id=<%= details._id %>" class="favorite">
@@ -53,16 +52,17 @@
         });
         
         %>
-        
-        <div class="dotw">
+
+
+        <div class="day-items">
             <div class="day mt-0"><span><%= day.day + ", " + day.date.slice(-2) %></span></div>
             <a href="status-update/?id=<%= details._id %>&date=<%= day.date %>" class="status2 mt-4">
                 <% if(found && status==='yes'){ %>
-                <i class="fas fa-check-circle"></i>
+                <i class="fa-regular fa-square-check"></i>
                 <% } else if(found && status==='no'){ %>
-                <i class="fas fa-times-circle"></i>
+                <i class="fa-solid fa-square-xmark"></i>
                 <% } else { %>
-                <i class="fas fa-minus-circle"></i>
+                <i class="fa-solid fa-circle-exclamation"></i>
                 <% } %>
             </a>
         </div>

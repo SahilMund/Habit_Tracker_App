@@ -1,12 +1,11 @@
 <!-- Dashboard view -->
-<!-- Header -->
 <link rel="stylesheet" href="/css/dashboard.css" />
 
 <%- include('partials/_navbar') %>
 
 <!-- Habit Container -->
 <div class="habit-container text-center">
-  <h2>Hi <%= user.name %> !! Enter your habits</h2>
+  <h3 style="margin-bottom: 30px;">Welcome <%= user.name %> !! Enter your habits</h3>
 
   <div class="habit">
     <%- include('partials/_habit-input') %> 
@@ -15,6 +14,7 @@
     let completeCount = 0, inCompleteCount = 0, unMarkedCount=0;
     habits.forEach(details => { let tzoffset = (new Date()).getTimezoneOffset() * 60000 ;
     var today = (new Date(Date.now() - tzoffset)).toISOString().slice(0, 10);
+    <!-- Keeping track of total count of completed, inCompleted and Unmarked Items -->
     details.dates.find(function (item, index) {
         if(item.date === today)
         {
@@ -27,9 +27,6 @@
             }
         }
     });
-
-   
-
  }); %>
         <i class="fa-regular fa-square-check" style="color: rgb(143, 233, 58)"></i>
         <%= user.viewType === "daily" ? completeCount  : '' %>

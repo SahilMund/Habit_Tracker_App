@@ -8,8 +8,10 @@
             </div>
    <% } %> 
     <div class="row">
+        
     <% habits.forEach(details => { let tzoffset = (new Date()).getTimezoneOffset() * 60000, found=false, status='', isDone = true;
         var today = (new Date(Date.now() - tzoffset)).toISOString().slice(0, 10);
+        <!-- to keep track of the current status of the item -->
         details.dates.find(function (item, index) {
             if(item.date === today)
             {
@@ -22,16 +24,11 @@
                     isDone = false;
                 }
             }
-    
-
         });
 
-
-
+        <!-- filter out the completed habit's dates  -->
         let dateList = details.dates.filter((ele) => ele.complete === "yes");
-
         let color = '';
-
         if(status === 'yes'){
             color = 'green'
         }else if(status === 'no'){
@@ -42,7 +39,7 @@
 
      %>
         
-    <div class="card border border-primary shadow-0 col-lg-3 col-md-12 habit-list-element <%= !isDone ? 'item-pending' : ''  %>"  style="color:rebeccapurple">
+    <div class="card border border-primary shadow-0 col-lg-3 col-md-12 habit-list-element"  style="color:rebeccapurple">
         <div class="card-header" style="border-bottom: 2px solid <%= color %>" >
             <span> <%= dateList.length  %> / <%=details.dates.length %> </span>
              </div>   
@@ -74,7 +71,6 @@
         </a> 
         </div>
       </div>
-    <!-- </li> -->
 
     <% }) %>
     </div>
