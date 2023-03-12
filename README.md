@@ -9,7 +9,6 @@ Habit Tracker APP using Node.JS, Express.JS, MongoDB to keep track of user's hab
 - User can registered themselves.
 - The entered password and confirm password should match.
 - Email should be unique.
-
 ```
 
 2. LogIn :-
@@ -17,7 +16,6 @@ Habit Tracker APP using Node.JS, Express.JS, MongoDB to keep track of user's hab
 ```
 - Only the registered user can login.
 - Entered email and password should be valid.
-
 ```
 
 3. Dashboard Page :-
@@ -38,7 +36,6 @@ Habit Tracker APP using Node.JS, Express.JS, MongoDB to keep track of user's hab
 ```
 - Showing the count of total completed, InCompleted and unMarked habits.
 - Showing the count of total days the user completed the habit and the count of total days the habits is entered but either             inCompleted or unmarked.
-- 
 ```
 
 5. Dashboard [Weekly View] Page :-
@@ -46,7 +43,6 @@ Habit Tracker APP using Node.JS, Express.JS, MongoDB to keep track of user's hab
 ```
 - Showing the current streak of the habits.
 - A view to display 7 days of each habit, User can toggle the status of the habit.
-
 ```
 
 
