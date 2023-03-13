@@ -88,7 +88,6 @@ assets
    |-- css
    |   |-- dashboard.css
    |   |-- header.css
-   |   |-- layout.css
    |   |-- user_form.css
 config
    |-- flash-middleware.js
@@ -116,5 +115,4 @@ views
    |   |-- _weekly-view.ejs
    |-- user_sign_in.ejs
    |-- user_sign_up.ejs
-   |-- welcome.ejs
 ```
