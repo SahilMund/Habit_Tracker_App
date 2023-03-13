@@ -89,6 +89,8 @@ assets
    |   |-- dashboard.css
    |   |-- header.css
    |   |-- user_form.css
+   |-- js
+   |   |-- main.js
 config
    |-- flash-middleware.js
    |-- mongoose.js
